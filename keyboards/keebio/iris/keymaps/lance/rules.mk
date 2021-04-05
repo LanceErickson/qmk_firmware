@@ -9,13 +9,15 @@ MCU = atmega32u4
 #   QMK DFU      qmk-dfu
 #   ATmega32A    bootloadHID
 #   ATmega328P   USBasp
-BOOTLOADER = atmel-dfu
+BOOTLOADER = qmk-dfu
 
 # Build Options
-#   change yes to no to disable
+#   change to "no" to disable the options, or define them in the Makefile in
+#   the appropriate keymap folder that will get included automatically
 #
-BOOTMAGIC_ENABLE = lite     # Virtual DIP switch configuration
-MOUSEKEY_ENABLE = yes       # Mouse keys
+
+BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
+MOUSEKEY_ENABLE = yes        # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no        # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
@@ -28,7 +30,6 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
-LTO_ENABLE = yes
-SPLIT_KEYBOARD = yes
 
-DEFAULT_FOLDER = keebio/sinc/rev1
+SPLIT_KEYBOARD = yes
+ENCODER_ENABLE = yes
